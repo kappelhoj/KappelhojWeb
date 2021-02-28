@@ -24,11 +24,11 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Publish
-      run: dotnet publish ./KappelhojWeb --no-build -c Release -o /home/web
+      run: dotnet publish ./KappelhojWeb --no-build
     - uses: actions/upload-artifact@v2
       with:
         name: web-publish
-        path: /home/web
+        path: ./KappelhojWeb/KappelhojWeb/bin/Release/net5.0/publish/
 
   Deploy:
     needs: Build-and-publish
