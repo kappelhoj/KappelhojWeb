@@ -22,16 +22,17 @@ jobs:
     - name: Build
       run: dotnet build ./KappelhojWeb --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test ./KappelhojWeb --no-build --verbosity normal
     - name: Publish
+      run: dotnet publish ./KappelhojWeb --no-build 
     - uses: actions/upload-artifact@v2
       with:
         name: web-publish
         path: /KappelhojWeb/bin/Release/net5.0/publish
 
-
   Publish Deploy:
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v2
     - uses: actions/download-artifact@v2
