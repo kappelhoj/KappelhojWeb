@@ -1,10 +1,10 @@
-name: .NET
+name: Build and Test
 
 on:
   push:
-    branches: [ master ]
+    branches: [ feature/** ]
   pull_request:
-    branches: [ master ]
+    branches: [ feature/** ]
 
 jobs:
   build:
@@ -13,10 +13,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Setup .NET
+    - name: Setup .NET 3.1
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.x
+    - name: Setup .NET Core 5.0
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
