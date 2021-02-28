@@ -7,7 +7,7 @@ on:
     branches: [ feature/** ]
 
 jobs:
-  Build:
+  Build-and-publish:
 
     runs-on: ubuntu-latest
 
@@ -22,7 +22,7 @@ jobs:
     - name: Build
       run: dotnet build ./KappelhojWeb --no-restore
     - name: Test
-      run: dotnet test ./KappelhojWeb --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal
     - name: Publish
       run: dotnet publish ./KappelhojWeb --no-build 
     - uses: actions/upload-artifact@v2
@@ -30,7 +30,7 @@ jobs:
         name: web-publish
         path: /KappelhojWeb/bin/Release/net5.0/publish
 
-  Publish Deploy:
+  Deploy:
     runs-on: ubuntu-latest
 
     steps:
