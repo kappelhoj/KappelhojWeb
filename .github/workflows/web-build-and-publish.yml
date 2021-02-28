@@ -31,6 +31,7 @@ jobs:
         path: /KappelhojWeb/bin/Release/net5.0/publish
 
   Deploy:
+    needs: Build-and-publish
     runs-on: ubuntu-latest
 
     steps:
