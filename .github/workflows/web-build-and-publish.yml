@@ -49,12 +49,13 @@ jobs:
         azcliversion: 2.0.72
         inlineScript: |
           az storage blob upload-batch --account-name kappelhojweb -d '$web' -s ./web-publish/wwwroot
-    - name: Purge CDN endpoint
-      uses: azure/CLI@v1
-      with:
-        azcliversion: 2.0.72
-        inlineScript: |
-          az cdn endpoint purge --content-paths  "/*" --profile-name "CDN_PROFILE_NAME" --name "CDN_ENDPOINT" --resource-group "RESOURCE_GROUP"
+    #https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-static-site-github-actions
+    #    - name: Purge CDN endpoint
+    #      uses: azure/CLI@v1
+    #      with:
+    #        azcliversion: 2.0.72
+    #        inlineScript: |
+    #          az cdn endpoint purge --content-paths  "/*" --profile-name "CDN_PROFILE_NAME" --name "CDN_ENDPOINT" --resource-group "RESOURCE_GROUP"
     # Azure logout 
     - name: logout
       run: |
