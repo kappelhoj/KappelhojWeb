@@ -28,7 +28,7 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: web-publish
-        path: ./KappelhojWeb/KappelhojWeb/bin/Release/net5.0/publish/
+        path: ./KappelhojWeb/bin/Release/net5.0/publish/
 
   Deploy:
     needs: Build-and-publish
