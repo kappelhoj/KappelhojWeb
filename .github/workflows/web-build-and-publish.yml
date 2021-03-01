@@ -2,9 +2,9 @@ name: Build and Publish to Azure Storage
 
 on:
   push:
-    branches: [ feature/** ]
+    branches: [ release/web/** ]
   pull_request:
-    branches: [ feature/** ]
+    branches: [ release/web/** ]
 
 jobs:
   Build-and-publish:
@@ -49,7 +49,7 @@ jobs:
         azcliversion: 2.0.72
         inlineScript: |
           az storage blob upload-batch --account-name kappelhojweb -d '$web' -s ./web-publish/wwwroot
-    #https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-static-site-github-actions
+    #    https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-static-site-github-actions
     #    - name: Purge CDN endpoint
     #      uses: azure/CLI@v1
     #      with:
