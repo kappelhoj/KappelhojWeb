@@ -1,10 +1,10 @@
-name: Build and Publish to Azure Storage
+name: Build and Publish to NameCheap
 
 on:
   push:
-    branches: [ release/web/** ]
+    branches: [ feature/web/** ]
   pull_request:
-    branches: [ release/web/** ]
+    branches: [ feature/web/** ]
 
 jobs:
   Build-and-publish:
@@ -40,25 +40,12 @@ jobs:
       with:
         name: web-publish
         path: web-publish
-    - uses: azure/login@v1
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-    - name: Upload to blob storage
-      uses: azure/CLI@v1
-      with:
-        azcliversion: 2.0.72
-        inlineScript: |
-          az storage blob upload-batch --account-name kappelhojweb -d '$web' -s ./web-publish/wwwroot
-    #    https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-static-site-github-actions
-    #    - name: Purge CDN endpoint
-    #      uses: azure/CLI@v1
-    #      with:
-    #        azcliversion: 2.0.72
-    #        inlineScript: |
-    #          az cdn endpoint purge --content-paths  "/*" --profile-name "CDN_PROFILE_NAME" --name "CDN_ENDPOINT" --resource-group "RESOURCE_GROUP"
-    # Azure logout 
-    - name: logout
-      run: |
-            az logout
+        server: server286.web-hosting.com
+        username: CI@kappelhoj.com
+        password: ${{ secrets.ftp_password }}
+    
 
 
