@@ -2,9 +2,9 @@ name: Build and Publish to NameCheap
 
 on:
   push:
-    branches: [ feature/web/** ]
+    branches: [ release/web/** ]
   pull_request:
-    branches: [ feature/web/** ]
+    branches: [ release/web/** ]
 
 jobs:
   Build-and-publish:
