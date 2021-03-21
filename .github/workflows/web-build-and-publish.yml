@@ -46,7 +46,7 @@ jobs:
         server: server286.web-hosting.com
         username: CI@kappelhoj.com
         password: ${{ secrets.ftp_password }}
-        local-dir: ./web-publish/wwwroot
+        local-dir: ./web-publish/wwwroot/
 
     
 
