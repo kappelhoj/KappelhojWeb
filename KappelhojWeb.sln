@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{F8009F63-DE0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureFunctionTest", "AzureFunctionTest\AzureFunctionTest.csproj", "{BCA4189D-99A8-47B3-B5B5-AD04A11B8057}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KappelhojWeb", "KappelhojWeb\KappelhojWeb.csproj", "{579A0BC2-D11F-4413-9670-0084F67E9D70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KappelhojWeb", "KappelhojWeb\KappelhojWeb.csproj", "{579A0BC2-D11F-4413-9670-0084F67E9D70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
