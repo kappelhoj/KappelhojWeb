@@ -9,7 +9,7 @@ module.exports ={
         "dev":{
             entry: "./src/pages/Dev/main.js",
             template: "public/index.html",
-            title: "Home",
+            title: "Dev",
             chunks: ["chunk-vendors", "chunk-common", "dev"]
         },
     }

@@ -1,14 +1,17 @@
 <template>
-  <div class="hello">
+  <div class="navbar">
     <h1>Welcome to Kappelhoj.com</h1>
   </div>
 </template>
 
+
 <script>
-export default {
-  name: 'HelloWorld',
+
+export default{
+  name: 'NavBar',
 }
 </script>
+
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
@@ -25,8 +28,5 @@ li {
 }
 a {
   color: #42b983;
-}
-.hello {
-  margin-top: 40px;
 }
 </style>
