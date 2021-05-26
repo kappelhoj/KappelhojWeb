@@ -8,27 +8,21 @@ on:
 
 jobs:
   Build-and-publish:
-
     runs-on: ubuntu-latest
-
+    
     steps:
     - uses: actions/checkout@v2
-    - name: Setup .NET Core 5.0
-      uses: actions/setup-dotnet@v1
+    - uses: actions/setup-node@v2
       with:
-        dotnet-version: 5.0.x
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build ./KappelhojWeb --no-restore -c Release
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
-    - name: Publish
-      run: dotnet publish ./KappelhojWeb --no-build -c Release
+        node-version: '12'
+    - name: Yarn install 
+      run: yarn --cwd ./Web/main install
+    - name: Yarn Build
+      run: yarn --cwd ./Web/main build
     - uses: actions/upload-artifact@v2
       with:
         name: web-publish
-        path: ./KappelhojWeb/bin/Release/net5.0/publish/
+        path: ./Web/main/dist
 
   Deploy:
     needs: Build-and-publish
@@ -46,7 +40,8 @@ jobs:
         server: server286.web-hosting.com
         username: CI@kappelhoj.com
         password: ${{ secrets.ftp_password }}
-        local-dir: ./web-publish/wwwroot/
+        local-dir: ./web-publish/
+        dangerous-clean-slate: true
 
     
 
