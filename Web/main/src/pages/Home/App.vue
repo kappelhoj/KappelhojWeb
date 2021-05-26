@@ -1,14 +1,21 @@
 <template>
-  <HelloWorld />
+  <DefaultPage>
+    <component :is="child_component"/>
+  </DefaultPage>
 </template>
 
 <script>
-import HelloWorld from '../../components/HelloWorld.vue'
+import DefaultPage from '../../components/Structure/DefaultPage.vue'
+import HomeRoot from '../../components/Roots/HomeRoot.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+export default{
+  name: 'DevPage',
+  components:{
+    DefaultPage,
+    HomeRoot
+  },
+  data(){
+    return {child_component: 'HomeRoot'}
   }
 }
 </script>
@@ -20,6 +27,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
+
