@@ -15,9 +15,9 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         node-version: '12'
-    - name: Install vue/cli-service
-      run: yarn global add @vue/cli-service
-    - name: Vue Build
+    - name: Yarn install 
+      run: yarn --cwd ./Web/main install
+    - name: Yarn Build
       run: yarn --cwd ./Web/main build
     - uses: actions/upload-artifact@v2
       with:
