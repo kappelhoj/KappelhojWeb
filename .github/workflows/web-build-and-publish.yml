@@ -15,12 +15,14 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         node-version: '12'
-    - name: Install
+    - name: Install Vue
+      run: yarn global add @vue/cli
+    - name: Vue Build
       run: yarn --cwd ./Web/main build
     - uses: actions/upload-artifact@v2
       with:
         name: web-publish
-        path: ./KappelhojWeb/bin/Release/net5.0/publish/
+        path: ./KappelhojWeb/dist
 
   Deploy:
     needs: Build-and-publish
