@@ -41,7 +41,6 @@ jobs:
         username: CI@kappelhoj.com
         password: ${{ secrets.ftp_password }}
         local-dir: ./web-publish/
-        server-dir: /public_html/
 
     
 
