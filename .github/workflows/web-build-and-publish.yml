@@ -41,6 +41,7 @@ jobs:
         username: CI@kappelhoj.com
         password: ${{ secrets.ftp_password }}
         local-dir: ./web-publish/
+        dangerous-clean-slate: true
 
     
 
