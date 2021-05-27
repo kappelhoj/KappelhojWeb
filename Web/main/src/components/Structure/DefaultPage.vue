@@ -18,4 +18,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .page{
+    max-width: 1280px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
 </style>
