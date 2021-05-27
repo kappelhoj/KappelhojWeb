@@ -1,7 +1,11 @@
 <template>
   <div class="page">
-    <NavBar/>
-    <slot></slot>
+    <div class="header">
+      <NavBar/>
+    </div>
+    <div class="main">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
@@ -19,10 +23,25 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .page{
-    max-width: 1280px;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: minmax(10px,auto) minmax(0,1280px) minmax(10px,auto);
+    grid-template-rows: 3em auto;
+    grid-template-areas: 
+    " . header ."
+    ". main .";
     text-align: center;
+
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+  }
+
+  .header{
+    grid-area: header;
+  }
+
+  .main{
+    grid-area: main;
   }
 </style>
