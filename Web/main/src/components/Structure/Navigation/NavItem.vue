@@ -32,9 +32,9 @@ export default{
   
   a{
     text-decoration: none;
-    color: #556b82;
+    color: var(--secondary-text-color);
   }
   a:hover{
-    color: #2c3e50;
+    color: var(--main-text-color);
   }
 </style>
