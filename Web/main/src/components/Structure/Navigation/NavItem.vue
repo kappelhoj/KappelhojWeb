@@ -32,7 +32,7 @@ export default{
   
   a{
     text-decoration: none;
-    color: var(--secondary-text-color);
+    color: var(--secondary-dark-color);
   }
   a:hover{
     color: var(--main-text-color);
