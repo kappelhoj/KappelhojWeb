@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <SocialLink 
-      image="./assets/social-logos/linkedin-64.png" 
+      imageUrl="./assets/social-logos/linkedin-64.png" 
       description="Hello"/>
     <SocialLink description="Hello"/>
     <SocialLink description="Hello"/>

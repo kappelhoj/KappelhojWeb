@@ -9,8 +9,6 @@
 
 
 <script>
-import image from "./assets/logo.png"
-
 export default{
   name: 'SocialLink',
   props:{
@@ -18,13 +16,18 @@ export default{
       type: String,
       required: true
     },
-    image:{
+    imageUrl:{
       type: String,
       required: true
     },
     path:{
       type: String,
       required: true
+    }
+  },
+    data: function () {
+    return {
+      image: require(props.imageUrl)
     }
   }
 }
