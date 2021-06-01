@@ -8,19 +8,21 @@
     </div>
     <div class="lf"/>
     <div class="footer">
-      <p>Footer</p>
+      <Footer/>
     </div>
     <div class="rf"/>
   </div>
 </template>
 
 <script>
-import NavBar from '../../components/Structure/Navigation/NavBar.vue'
+import NavBar from './Navigation/NavBar.vue'
+import Footer from './Footer/Footer.vue'
 
 export default {
   name: 'DefaultPage',
     components: {
-    NavBar
+    NavBar,
+    Footer
   }
 }
 </script>
@@ -30,7 +32,7 @@ export default {
   .page{
     display: grid;
     min-height: 100vh;
-    grid-template-columns: minmax(10px,auto) minmax(0,1280px) minmax(10px,auto);
+    grid-template-columns: minmax(1em,auto) minmax(0,1280px) minmax(1em,auto);
     grid-template-rows: auto 1fr auto;
     grid-template-areas: 
     " . header ."
