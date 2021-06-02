@@ -1,10 +1,15 @@
 <template>
   <div class="footer">
     <SocialLink 
-      imageUrl="./assets/social-logos/linkedin-64.png" 
-      description="Hello"/>
-    <SocialLink description="Hello"/>
-    <SocialLink description="Hello"/>
+      imageUrl="social-logos/linkedin-64.png" 
+      topText="Linkedin"
+      bottomText="Profile"
+      path="https://www.linkedin.com/in/arvidlangsoe/"/>
+    <SocialLink 
+      imageUrl="social-logos/GitHub-Mark-Light-64px.png" 
+      topText="Github"
+      bottomText="Profile"
+      path="https://github.com/ArvidLangsoe"/>
   </div>
 </template>
 
@@ -24,8 +29,9 @@ export default{
 <style scoped>
   .footer{
     display: flex;
-    margin: 1.5em 1.0em;
+    margin: 0.0em 0.5em;
     text-align: left;
+    justify-content: flex-start;
   }
 
 </style>
