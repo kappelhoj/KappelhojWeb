@@ -1,10 +1,8 @@
 name: Build and Publish to NameCheap
 
 on:
-  push:
-    branches: [ release/web/** ]
-  pull_request:
-    branches: [ release/web/** ]
+  create:
+    tags: [ release/web/** ]
 
 jobs:
   Build-and-publish:
