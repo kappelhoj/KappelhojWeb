@@ -6,16 +6,23 @@
     <div class="main">
       <slot></slot>
     </div>
+    <div class="lf"/>
+    <div class="footer">
+      <Footer/>
+    </div>
+    <div class="rf"/>
   </div>
 </template>
 
 <script>
-import NavBar from '../../components/Structure/Navigation/NavBar.vue'
+import NavBar from './Navigation/NavBar.vue'
+import Footer from './Footer/Footer.vue'
 
 export default {
   name: 'DefaultPage',
     components: {
-    NavBar
+    NavBar,
+    Footer
   }
 }
 </script>
@@ -24,13 +31,15 @@ export default {
 <style scoped>
   .page{
     display: grid;
-    grid-template-columns: minmax(10px,auto) minmax(0,1280px) minmax(10px,auto);
-    grid-template-rows: 3em auto;
+    min-height: 100vh;
+    grid-template-columns: minmax(1em,auto) minmax(0,1280px) minmax(1em,auto);
+    grid-template-rows: auto 1fr auto;
     grid-template-areas: 
     " . header ."
-    ". main .";
-    text-align: center;
-    color: var(--main-text-color);
+    ". main ."
+    "lf footer rf";
+    color: var(--main-dark-color);
+    background: var(--main-white-color);
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -43,4 +52,21 @@ export default {
   .main{
     grid-area: main;
   }
+
+  .footer{
+    grid-area: footer;
+    color: var(--main-white-color);
+    background: var(--main-dark-color);
+  }
+
+  .lf{
+    grid-area: lf;
+    background: var(--main-dark-color);
+  }
+
+  .rf{
+    grid-area: rf;
+    background: var(--main-dark-color);
+  }
+
 </style>

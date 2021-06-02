@@ -27,12 +27,12 @@ export default{
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .nav-item{
-    margin-left: 20px;
+    margin-left: 1.5em;
   }
   
   a{
     text-decoration: none;
-    color: var(--secondary-text-color);
+    color: var(--secondary-dark-color);
   }
   a:hover{
     color: var(--main-text-color);
