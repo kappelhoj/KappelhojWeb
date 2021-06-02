@@ -38,7 +38,6 @@ export default {
     " . header ."
     ". main ."
     "lf footer rf";
-    text-align: center;
     color: var(--main-dark-color);
     background: var(--main-white-color);
     font-family: Avenir, Helvetica, Arial, sans-serif;
