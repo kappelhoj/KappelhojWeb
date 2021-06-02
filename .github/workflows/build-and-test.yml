@@ -2,9 +2,9 @@ name: Build and Test
 
 on:
   push:
-    branches: [ feature/** ]
+    branches: [ feature/backend/** ]
   pull_request:
-    branches: [ feature/** ]
+    branches: [feature/backend/**]
 
 jobs:
   build:
