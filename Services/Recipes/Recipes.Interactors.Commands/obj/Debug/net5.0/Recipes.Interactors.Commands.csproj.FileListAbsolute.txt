@@ -1,0 +1,10 @@
+C:\Users\arvid\source\repos\KappelhojWeb\Services\Recipes\Kappelhoj.Interactors.Commands\obj\Debug\net5.0\Recipes.Interactors.Commands.csproj.AssemblyReference.cache
+C:\Users\arvid\source\repos\KappelhojWeb\Services\Recipes\Kappelhoj.Interactors.Commands\obj\Debug\net5.0\Recipes.Interactors.Commands.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arvid\source\repos\KappelhojWeb\Services\Recipes\Kappelhoj.Interactors.Commands\obj\Debug\net5.0\Recipes.Interactors.Commands.AssemblyInfoInputs.cache
+C:\Users\arvid\source\repos\KappelhojWeb\Services\Recipes\Kappelhoj.Interactors.Commands\obj\Debug\net5.0\Recipes.Interactors.Commands.AssemblyInfo.cs
+C:\Users\arvid\source\repos\KappelhojWeb\Services\Recipes\Kappelhoj.Interactors.Commands\obj\Debug\net5.0\Recipes.Interactors.Commands.csproj.CoreCompileInputs.cache
+C:\Users\arvid\source\repos\KappelhojWeb\Services\Recipes\Recipes.Interactors.Commands\obj\Debug\net5.0\Recipes.Interactors.Commands.csproj.AssemblyReference.cache
+C:\Users\arvid\source\repos\KappelhojWeb\Services\Recipes\Recipes.Interactors.Commands\obj\Debug\net5.0\Recipes.Interactors.Commands.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arvid\source\repos\KappelhojWeb\Services\Recipes\Recipes.Interactors.Commands\obj\Debug\net5.0\Recipes.Interactors.Commands.AssemblyInfoInputs.cache
+C:\Users\arvid\source\repos\KappelhojWeb\Services\Recipes\Recipes.Interactors.Commands\obj\Debug\net5.0\Recipes.Interactors.Commands.AssemblyInfo.cs
+C:\Users\arvid\source\repos\KappelhojWeb\Services\Recipes\Recipes.Interactors.Commands\obj\Debug\net5.0\Recipes.Interactors.Commands.csproj.CoreCompileInputs.cache
