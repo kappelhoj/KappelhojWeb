@@ -1,0 +1,12 @@
+C:\Users\arvid\source\repos\KappelhojWeb\Services\Recipes\FoodPlanner.Commands.Interactors\bin\Debug\net5.0\FoodPlanner.Commands.Interactors.deps.json
+C:\Users\arvid\source\repos\KappelhojWeb\Services\Recipes\FoodPlanner.Commands.Interactors\bin\Debug\net5.0\FoodPlanner.Commands.Interactors.dll
+C:\Users\arvid\source\repos\KappelhojWeb\Services\Recipes\FoodPlanner.Commands.Interactors\bin\Debug\net5.0\ref\FoodPlanner.Commands.Interactors.dll
+C:\Users\arvid\source\repos\KappelhojWeb\Services\Recipes\FoodPlanner.Commands.Interactors\bin\Debug\net5.0\FoodPlanner.Commands.Interactors.pdb
+C:\Users\arvid\source\repos\KappelhojWeb\Services\Recipes\FoodPlanner.Commands.Interactors\obj\Debug\net5.0\FoodPlanner.Commands.Interactors.csproj.AssemblyReference.cache
+C:\Users\arvid\source\repos\KappelhojWeb\Services\Recipes\FoodPlanner.Commands.Interactors\obj\Debug\net5.0\FoodPlanner.Commands.Interactors.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arvid\source\repos\KappelhojWeb\Services\Recipes\FoodPlanner.Commands.Interactors\obj\Debug\net5.0\FoodPlanner.Commands.Interactors.AssemblyInfoInputs.cache
+C:\Users\arvid\source\repos\KappelhojWeb\Services\Recipes\FoodPlanner.Commands.Interactors\obj\Debug\net5.0\FoodPlanner.Commands.Interactors.AssemblyInfo.cs
+C:\Users\arvid\source\repos\KappelhojWeb\Services\Recipes\FoodPlanner.Commands.Interactors\obj\Debug\net5.0\FoodPlanner.Commands.Interactors.csproj.CoreCompileInputs.cache
+C:\Users\arvid\source\repos\KappelhojWeb\Services\Recipes\FoodPlanner.Commands.Interactors\obj\Debug\net5.0\FoodPlanner.Commands.Interactors.dll
+C:\Users\arvid\source\repos\KappelhojWeb\Services\Recipes\FoodPlanner.Commands.Interactors\obj\Debug\net5.0\ref\FoodPlanner.Commands.Interactors.dll
+C:\Users\arvid\source\repos\KappelhojWeb\Services\Recipes\FoodPlanner.Commands.Interactors\obj\Debug\net5.0\FoodPlanner.Commands.Interactors.pdb

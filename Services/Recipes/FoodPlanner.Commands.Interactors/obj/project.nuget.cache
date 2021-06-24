@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "zdJ1hrdtRJr5Xnpb6O7myT7lOW0XsPjBcNge3Jy4bc+scXObWf5gzC+pSc8Q6dhBqCSBRT2ySBCUX+j7yNY9LQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\arvid\\source\\repos\\KappelhojWeb\\Services\\Recipes\\FoodPlanner.Commands.Interactors\\FoodPlanner.Commands.Interactors.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\arvid\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
