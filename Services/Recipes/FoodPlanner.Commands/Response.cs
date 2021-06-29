@@ -8,6 +8,6 @@ namespace FoodPlanner.Commands
 {
     public class Response<T>
     {
-        T Result { get; set; }
+        public T Result { get; set; }
     }
 }

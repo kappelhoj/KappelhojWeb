@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FoodPlanner.Domain.Recipes
+namespace FoodPlanner.Commands.Core.Integrations
 {
-    public record Step
+    public interface IRepository
     {
-        public string Description { get; set; }
+        public T AddEntity<T>(T entity);
+
     }
 }

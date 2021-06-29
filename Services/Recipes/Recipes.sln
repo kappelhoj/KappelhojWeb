@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodPlanner.Commands", "FoodPlanner.Commands\FoodPlanner.Commands.csproj", "{BBF17E5D-D39E-41D2-9D0C-FCED5292EF08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodPlanner.Commands", "FoodPlanner.Commands\FoodPlanner.Commands.csproj", "{BBF17E5D-D39E-41D2-9D0C-FCED5292EF08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodPlanner.Domain", "FoodPlanner.Domain\FoodPlanner.Domain.csproj", "{3E691183-9C9D-4B31-989B-61E7D58B0188}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodPlanner.Domain", "FoodPlanner.Domain\FoodPlanner.Domain.csproj", "{3E691183-9C9D-4B31-989B-61E7D58B0188}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodPlanner.Commands.Tests", "FoodPlanner.Commands.Tests\FoodPlanner.Commands.Tests.csproj", "{030E8E0A-BB2B-413A-AA0D-4B00E7049C6B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{3E691183-9C9D-4B31-989B-61E7D58B0188}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E691183-9C9D-4B31-989B-61E7D58B0188}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E691183-9C9D-4B31-989B-61E7D58B0188}.Release|Any CPU.Build.0 = Release|Any CPU
+		{030E8E0A-BB2B-413A-AA0D-4B00E7049C6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{030E8E0A-BB2B-413A-AA0D-4B00E7049C6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{030E8E0A-BB2B-413A-AA0D-4B00E7049C6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{030E8E0A-BB2B-413A-AA0D-4B00E7049C6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
