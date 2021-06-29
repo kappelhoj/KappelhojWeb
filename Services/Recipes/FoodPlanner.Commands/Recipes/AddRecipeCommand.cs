@@ -3,7 +3,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace FoodPlanner.Commands.Interactors.Recipes
+namespace FoodPlanner.Commands.Recipes
 {
     public class AddRecipeCommand : Command<Response<string>>
     {
