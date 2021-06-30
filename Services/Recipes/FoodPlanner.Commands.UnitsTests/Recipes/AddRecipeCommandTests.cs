@@ -1,4 +1,4 @@
-﻿using FoodPlanner.Commands.Core.Integrations;
+﻿using FoodPlanner.Commands.Integrations;
 using FoodPlanner.Commands.Recipes;
 using FoodPlanner.Domain.Recipes;
 using MediatR;
@@ -20,7 +20,7 @@ namespace FoodPlanner.Commands.UnitTests.Recipes
         public AddRecipeCommandTests() { 
 
             _repositoryMock = new Mock<IRepository>();
-            _repositoryMock.Setup(mock => mock.AddEntity(It.IsAny<Recipe>())).Returns<Recipe>(x => x);
+            _repositoryMock.Setup(mock => mock.AddEntity(It.IsAny<Recipe>())).Returns<Recipe>(x => Task.FromResult(x));
         }
 
 
@@ -47,7 +47,7 @@ namespace FoodPlanner.Commands.UnitTests.Recipes
 
             _repositoryMock.Setup(mock => mock.AddEntity(It.IsAny<Recipe>()))
                 .Callback<Recipe>(x => entityCreated = x)
-                .Returns<Recipe>(x => x);
+                .Returns<Recipe>(x => Task.FromResult(x));
 
             IRequestHandler<AddRecipeCommand, Response<Guid>> addRecipeHandler = new AddRecipeHandler(_repositoryMock.Object);
 

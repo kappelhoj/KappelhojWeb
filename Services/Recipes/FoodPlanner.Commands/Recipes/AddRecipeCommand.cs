@@ -1,4 +1,4 @@
-﻿using FoodPlanner.Commands.Core.Integrations;
+﻿using FoodPlanner.Commands.Integrations;
 using FoodPlanner.Domain.Recipes;
 using MediatR;
 using System;
@@ -32,7 +32,7 @@ namespace FoodPlanner.Commands.Recipes
                 Title = request.Title
             };
 
-            _repository.AddEntity(recipe);
+            await _repository.AddEntity(recipe);
 
             return new Response<Guid>
             {

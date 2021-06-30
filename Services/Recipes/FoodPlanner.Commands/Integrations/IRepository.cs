@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FoodPlanner.Commands.Core.Integrations
+namespace FoodPlanner.Commands.Integrations
 {
     public interface IRepository
     {
-        public T AddEntity<T>(T entity);
+        public Task<T> AddEntity<T>(T entity);
 
     }
 }
