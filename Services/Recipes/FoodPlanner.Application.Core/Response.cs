@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FoodPlanner.Commands
+namespace FoodPlanner.Application.Core.Contracts.Infrastructure
 {
     public class Response<T>
     {

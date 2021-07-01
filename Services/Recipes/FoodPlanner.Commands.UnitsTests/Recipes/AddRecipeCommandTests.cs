@@ -1,12 +1,9 @@
-﻿using FoodPlanner.Commands.Integrations;
+﻿using FoodPlanner.Application.Core.Contracts.Infrastructure;
 using FoodPlanner.Commands.Recipes;
 using FoodPlanner.Domain.Recipes;
 using MediatR;
 using Moq;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;

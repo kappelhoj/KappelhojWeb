@@ -1,4 +1,4 @@
-﻿using FoodPlanner.Commands.Integrations;
+﻿using FoodPlanner.Application.Core.Contracts.Infrastructure;
 using FoodPlanner.Domain.Recipes;
 using MediatR;
 using System;
