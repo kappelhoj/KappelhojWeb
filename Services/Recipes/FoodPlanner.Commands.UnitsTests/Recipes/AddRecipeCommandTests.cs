@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -32,7 +33,7 @@ namespace FoodPlanner.Commands.UnitTests.Recipes
             var addRecipeCommand = CreateValidAddRecipeCommand();
 
             //Act
-            var response = await _addRecipeHandler.Handle(addRecipeCommand, default);
+            var response = await _addRecipeHandler.Handle(addRecipeCommand, CancellationToken.None);
 
             //Assert
             Assert.NotEqual(Guid.Empty, response.Result);
@@ -50,7 +51,7 @@ namespace FoodPlanner.Commands.UnitTests.Recipes
                 .Returns<Recipe>(x => Task.FromResult(x));
 
             //Act
-            var response = await _addRecipeHandler.Handle(addRecipeCommand, default);
+            var response = await _addRecipeHandler.Handle(addRecipeCommand, CancellationToken.None);
 
             //Assert
             _entityPersisterMock.Verify(mock => mock.PersistEntity(It.IsAny<Recipe>()), Times.Once);
