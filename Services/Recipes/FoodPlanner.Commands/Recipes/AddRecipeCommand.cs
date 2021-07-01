@@ -23,7 +23,7 @@ namespace FoodPlanner.Commands.Recipes
         }
 
 
-       async Task<Response<Guid>> IRequestHandler<AddRecipeCommand, Response<Guid>>.Handle(AddRecipeCommand request, CancellationToken cancellationToken)
+        public async Task<Response<Guid>> Handle(AddRecipeCommand request, CancellationToken cancellationToken)
         {
             var recipe = new Recipe()
             {

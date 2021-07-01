@@ -13,7 +13,7 @@ namespace FoodPlanner.Commands.UnitTests.Recipes
     public class AddRecipeCommandTests
     {
 
-        private IRequestHandler<AddRecipeCommand, Response<Guid>> _addRecipeHandler;
+        private AddRecipeHandler _addRecipeHandler;
         private Mock<IEntityPersister> _entityPersisterMock;
 
         public AddRecipeCommandTests() { 
