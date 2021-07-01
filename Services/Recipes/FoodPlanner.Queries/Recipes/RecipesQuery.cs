@@ -10,12 +10,16 @@ namespace FoodPlanner.Queries.Recipes
 {
     public class RecipesQuery : Query<Response<IEnumerable<RecipeViewModel>>>
     {
-        public int PageSize { get; set; } = 15;
     }
 
 
     public class RecipesQueryHandler : IRequestHandler<RecipesQuery, Response<IEnumerable<RecipeViewModel>>>
-    {
+    {        
+        public RecipesQueryHandler(IEntityRetriever entityRetriever)
+        {
+
+        }
+        
         public Task<Response<IEnumerable<RecipeViewModel>>> Handle(RecipesQuery request, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();

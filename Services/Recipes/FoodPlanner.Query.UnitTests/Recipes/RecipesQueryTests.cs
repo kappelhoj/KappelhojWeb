@@ -1,7 +1,10 @@
-﻿using FoodPlanner.Application.Core.Contracts.Infrastructure;
+﻿using AutoFixture;
+using FoodPlanner.Application.Core.Contracts.Infrastructure;
+using FoodPlanner.Domain.Recipes;
 using FoodPlanner.Queries.Recipes;
 using FoodPlanner.Queries.ViewModels;
 using MediatR;
+using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,23 +17,34 @@ namespace FoodPlanner.Query.UnitTests.Recipes
 {
     public class RecipesQueryTests
     {
-        IRequestHandler<RecipesQuery, Response<IEnumerable<RecipeViewModel>>> _recipesQueryHandler;
+        private Fixture _fixture = new Fixture();
+
+        private Mock<IEntityRetriever> _entityRetrieverMock;
+        private IRequestHandler<RecipesQuery, Response<IEnumerable<RecipeViewModel>>> _recipesQueryHandler;
 
 
         public RecipesQueryTests() {
-            _recipesQueryHandler = new RecipesQueryHandler();
+            _entityRetrieverMock = new Mock<IEntityRetriever>();
+
+            _recipesQueryHandler = new RecipesQueryHandler(_entityRetrieverMock.Object);
         }
 
         [Fact]
-        public async void WhenQueryRecipes_ThenRecipesCountMatchDefaultPageSize() {
+        public async void GivedPersistedRecipes_WhenQueryRecipes_ThenSameRecipesReturned() {
             //Arrange
             var recipesQuery = new RecipesQuery();
+            var recipes = _fixture.CreateMany<Recipe>();
+
+            _entityRetrieverMock.Setup(mock => mock.QueryEntities<Recipe>())
+                .Returns(Task.FromResult(recipes.AsQueryable()));
 
             //Act
             var response = await _recipesQueryHandler.Handle(recipesQuery, CancellationToken.None);
 
             //Assert
-            Assert.Equal(recipesQuery.PageSize, response.Result.Count());
+            foreach (var recipe in recipes) {
+                Assert.NotNull(response.Result.FirstOrDefault(x => x.Id == recipe.Id));
+            }
         }
     }
 }
