@@ -20,7 +20,7 @@ namespace FoodPlanner.Query.UnitTests.Recipes
         private Fixture _fixture = new Fixture();
 
         private Mock<IEntityRetriever> _entityRetrieverMock;
-        private IRequestHandler<RecipesQuery, Response<IEnumerable<RecipeViewModel>>> _recipesQueryHandler;
+        private RecipesQueryHandler _recipesQueryHandler;
 
 
         public RecipesQueryTests() {
