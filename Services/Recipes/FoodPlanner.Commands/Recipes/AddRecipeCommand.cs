@@ -2,7 +2,6 @@
 using FoodPlanner.Domain.Recipes;
 using MediatR;
 using System;
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -16,11 +15,11 @@ namespace FoodPlanner.Commands.Recipes
 
     public class AddRecipeHandler : IRequestHandler<AddRecipeCommand, Response<Guid>>
     {
-        private readonly IRepository _repository;
+        private readonly IEntityPersister _entityPersister;
 
-        public AddRecipeHandler(IRepository repository)
+        public AddRecipeHandler(IEntityPersister repository)
         {
-            _repository = repository;
+            _entityPersister = repository;
         }
 
 
@@ -32,7 +31,7 @@ namespace FoodPlanner.Commands.Recipes
                 Title = request.Title
             };
 
-            await _repository.AddEntity(recipe);
+            await _entityPersister.PersistEntity(recipe);
 
             return new Response<Guid>
             {

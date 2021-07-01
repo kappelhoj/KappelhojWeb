@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FoodPlanner.Commands.Integrations
+namespace FoodPlanner.Queries.ViewModels
 {
-    public interface IRepository
+    //TODO Move to seperate project
+    public class RecipeViewModel
     {
-        public Task<T> AddEntity<T>(T entity);
-
     }
 }
