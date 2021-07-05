@@ -30,7 +30,8 @@ namespace FoodPlanner.Query.UnitTests.Recipes
         }
 
         [Fact]
-        public async void GivedPersistedRecipes_WhenQueryRecipes_ThenSameRecipesReturned() {
+        public async void GivenPersistedRecipes_WhenQueryRecipes_ThenSameRecipesReturned() 
+        {
             //Arrange
             var recipesQuery = new RecipesQuery();
             var recipes = _fixture.CreateMany<Recipe>();

@@ -28,8 +28,7 @@ namespace FoodPlanner.Queries.Recipes
 
             var response = new Response<IEnumerable<RecipeViewModel>>
             {
-                //TODO: Create map method
-                Result = recipesQuery.Select(r => new RecipeViewModel() { Id=r.Id}).ToList()
+                Result = recipesQuery.Select(r => r.MapToViewModel()).ToList()
             };
 
             return response;
