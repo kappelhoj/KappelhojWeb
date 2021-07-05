@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A22B6904-03F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3C4FFBB6-85B0-40EF-9411-8E865A458441}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodPlanner.IntegrationTests", "FoodPlanner.IntegrationTests\FoodPlanner.IntegrationTests.csproj", "{74B0466C-95BE-43CF-9FEC-78667A31BF26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{6A62780A-283B-44D6-9ED9-0E7A497FCBE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A62780A-283B-44D6-9ED9-0E7A497FCBE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A62780A-283B-44D6-9ED9-0E7A497FCBE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74B0466C-95BE-43CF-9FEC-78667A31BF26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74B0466C-95BE-43CF-9FEC-78667A31BF26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74B0466C-95BE-43CF-9FEC-78667A31BF26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74B0466C-95BE-43CF-9FEC-78667A31BF26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +66,7 @@ Global
 		{333ABFF0-ADA3-41C9-8D45-A9BEDDF2FB99} = {A22B6904-03F4-498D-AA7B-58124DCF9379}
 		{F22D3308-E063-46E0-A7B8-7EA407DDBFFD} = {A22B6904-03F4-498D-AA7B-58124DCF9379}
 		{6A62780A-283B-44D6-9ED9-0E7A497FCBE5} = {3C4FFBB6-85B0-40EF-9411-8E865A458441}
+		{74B0466C-95BE-43CF-9FEC-78667A31BF26} = {3C4FFBB6-85B0-40EF-9411-8E865A458441}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4B1AF1E2-30E2-4244-995B-01687DE9743B}
