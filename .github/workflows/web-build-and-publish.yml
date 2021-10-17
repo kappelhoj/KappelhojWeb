@@ -38,4 +38,6 @@ jobs:
       with:
         name: web-publish
         path: web-publish
+    - name: List all files
+      run: ls -a
     
