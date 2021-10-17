@@ -1,13 +1,13 @@
-﻿using System;
+﻿using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FoodPlanner.Commands
+namespace FoodPlanner.Queries
 {
-    public class Response<T>
+    public abstract class Query<T> : IRequest<T>
     {
-        public T Result { get; set; }
     }
 }

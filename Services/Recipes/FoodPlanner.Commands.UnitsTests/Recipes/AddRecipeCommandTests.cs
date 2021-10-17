@@ -1,12 +1,10 @@
-﻿using FoodPlanner.Commands.Core.Integrations;
+﻿using FoodPlanner.Application.Core.Contracts.Infrastructure;
 using FoodPlanner.Commands.Recipes;
 using FoodPlanner.Domain.Recipes;
 using MediatR;
 using Moq;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -15,12 +13,14 @@ namespace FoodPlanner.Commands.UnitTests.Recipes
     public class AddRecipeCommandTests
     {
 
-        private Mock<IRepository> _repositoryMock;
+        private AddRecipeHandler _addRecipeHandler;
+        private Mock<IEntityPersister> _entityPersisterMock;
 
         public AddRecipeCommandTests() { 
 
-            _repositoryMock = new Mock<IRepository>();
-            _repositoryMock.Setup(mock => mock.AddEntity(It.IsAny<Recipe>())).Returns<Recipe>(x => x);
+            _entityPersisterMock = new Mock<IEntityPersister>();
+            _entityPersisterMock.Setup(mock => mock.PersistEntity(It.IsAny<Recipe>())).Returns<Recipe>(x => Task.FromResult(x));
+            _addRecipeHandler = new AddRecipeHandler(_entityPersisterMock.Object);
         }
 
 
@@ -29,10 +29,8 @@ namespace FoodPlanner.Commands.UnitTests.Recipes
             //Arrange
             var addRecipeCommand = CreateValidAddRecipeCommand();
 
-            IRequestHandler<AddRecipeCommand, Response<Guid>> addRecipeHandler = new AddRecipeHandler(_repositoryMock.Object);
-
             //Act
-            var response = await addRecipeHandler.Handle(addRecipeCommand, default);
+            var response = await _addRecipeHandler.Handle(addRecipeCommand, CancellationToken.None);
 
             //Assert
             Assert.NotEqual(Guid.Empty, response.Result);
@@ -45,17 +43,15 @@ namespace FoodPlanner.Commands.UnitTests.Recipes
             var addRecipeCommand = CreateValidAddRecipeCommand();
             Recipe? entityCreated = null;
 
-            _repositoryMock.Setup(mock => mock.AddEntity(It.IsAny<Recipe>()))
+            _entityPersisterMock.Setup(mock => mock.PersistEntity(It.IsAny<Recipe>()))
                 .Callback<Recipe>(x => entityCreated = x)
-                .Returns<Recipe>(x => x);
-
-            IRequestHandler<AddRecipeCommand, Response<Guid>> addRecipeHandler = new AddRecipeHandler(_repositoryMock.Object);
+                .Returns<Recipe>(x => Task.FromResult(x));
 
             //Act
-            var response = await addRecipeHandler.Handle(addRecipeCommand, default);
+            var response = await _addRecipeHandler.Handle(addRecipeCommand, CancellationToken.None);
 
             //Assert
-            _repositoryMock.Verify(mock => mock.AddEntity(It.IsAny<Recipe>()), Times.Once);
+            _entityPersisterMock.Verify(mock => mock.PersistEntity(It.IsAny<Recipe>()), Times.Once);
             Assert.NotNull(entityCreated?.Id);
             Assert.Equal(response.Result, entityCreated?.Id);
             Assert.Equal(addRecipeCommand.Title, entityCreated?.Title);

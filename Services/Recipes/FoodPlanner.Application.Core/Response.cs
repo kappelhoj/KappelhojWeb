@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FoodPlanner.Commands.Core.Integrations
+namespace FoodPlanner.Application.Core.Contracts.Infrastructure
 {
-    public interface IRepository
+    public class Response<T>
     {
-        public T AddEntity<T>(T entity);
-
+        public T Result { get; set; }
     }
 }
