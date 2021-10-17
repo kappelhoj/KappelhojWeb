@@ -1,7 +1,4 @@
 module.exports ={
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/KappelhojWeb/'
-    : '/',
   pages:{
     "index":{
       entry: "./src/pages/Home/main.js",
