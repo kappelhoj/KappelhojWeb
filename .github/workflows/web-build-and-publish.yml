@@ -31,7 +31,7 @@ jobs:
       with: 
         ref: gh-pages
     - name: Delete files
-      run: rm *
+      run: rm -r *
     - name: List all files
       run: ls -a
     - uses: actions/download-artifact@v2
