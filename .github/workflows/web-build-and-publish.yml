@@ -41,6 +41,6 @@ jobs:
     - name: List all files
       run: ls -a
     - name: Echo tag
-      run: echo ${GITHUB_REF:10}
+      run: echo ${GITHUB_REF##*/}
     
     
