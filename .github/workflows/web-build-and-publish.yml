@@ -2,7 +2,7 @@ name: Build and Publish to NameCheap
 
 on:
   create:
-    tags: [ release/web/** ]
+    tags: [ release/** ]
 
 jobs:
   Build-and-publish:
@@ -28,19 +28,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with: 
+        ref: gh-pages
+    - name: Delete files
+      run: ls
     - uses: actions/download-artifact@v2
       with:
         name: web-publish
         path: web-publish
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
-      with:
-        server: server286.web-hosting.com
-        username: CI@kappelhoj.com
-        password: ${{ secrets.ftp_password }}
-        local-dir: ./web-publish/
-        dangerous-clean-slate: true
-
+    
+    
     
 
 
