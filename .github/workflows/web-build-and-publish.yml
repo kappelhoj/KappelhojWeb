@@ -43,5 +43,3 @@ jobs:
         git add -A
         git commit -m "${GITHUB_REF##*/}"
         git push
-    
-    
