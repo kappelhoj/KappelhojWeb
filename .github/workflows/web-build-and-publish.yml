@@ -1,4 +1,4 @@
-name: Build and Publish to NameCheap
+name: Build and Publish to Github Pages
 
 on:
   create:
@@ -31,13 +31,11 @@ jobs:
       with: 
         ref: gh-pages
     - name: Delete files
-      run: ls
+      run: rm *
+    - name: List all files
+      run: ls -a
     - uses: actions/download-artifact@v2
       with:
         name: web-publish
         path: web-publish
     
-    
-    
-
-
