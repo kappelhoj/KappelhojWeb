@@ -42,5 +42,9 @@ jobs:
       run: ls -a
     - name: Echo tag
       run: echo ${GITHUB_REF##*/}
+    - name: Commit
+      run: git commit -m "${GITHUB_REF##*/}"
+    - name: Deploy
+      run: git push
     
     
