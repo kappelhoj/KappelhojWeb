@@ -1,8 +1,8 @@
 <template>
   <div class="welcome">
     <h1>Welcome to Kappelhoj.com</h1>
-    <h3>Hello! This is my website. Here i will place a bunch of sparetime projects.</h3>
-    <h3>Currently there is not much here</h3>
+    <h3>Hello! This is my website</h3>
+    <h3>Currently i have nothing to put here. You can checkout my Github or Linkedin in the footer</h3>
   </div>
 </template>
 
