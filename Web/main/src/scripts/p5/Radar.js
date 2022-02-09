@@ -1,6 +1,6 @@
 let p5;
 export function main(p5Init){
-  p5 = p5Init; //TODO: UGLY UGLY
+  p5 = p5Init; 
   const defaultSpeed = 2;
   var speed = defaultSpeed;    
   var posX = 0;
