@@ -2,7 +2,8 @@ name: Build and Publish to Github Pages
 
 on:
   create:
-    tags: [ release/** ]
+    tags: 
+      - '**'
 
 jobs:
   Build-and-publish:
