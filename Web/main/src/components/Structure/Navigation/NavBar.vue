@@ -2,6 +2,7 @@
   <div class="nav-bar">
     <NavItem title="Home" path="/"/>
     <NavItem title="Dev" path="/dev" />
+    <NavItem title="Games" path="/games" />
   </div>
 </template>
 

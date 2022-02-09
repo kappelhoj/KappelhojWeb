@@ -12,5 +12,11 @@ module.exports ={
       title: "Dev",
       chunks: ["chunk-vendors", "chunk-common", "dev"]
     },
+    "games":{
+      entry: "./src/pages/Games/main.js",
+      template: "public/index.html",
+      title: "Games",
+      chunks: ["chunk-vendors", "chunk-common", "games"]
+    },
   }
 }
