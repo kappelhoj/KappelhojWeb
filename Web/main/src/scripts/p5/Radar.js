@@ -12,24 +12,33 @@ export function main(p5Init){
   // NOTE: Draw is here
   p5.draw = () => {      
     p5.background(0);
+
     p5.push();
-    bubble.display();
+    bubble.draw();
     p5.pop();
   } 
 
-  p5.mouseClicked = () => {
-    bubble = new Bubble();
+  p5.touchEnded = () => {
+    if(bubble.contains(p5.mouseX, p5.mouseY)){
+      bubble = new Bubble();
+    }
   }
 }
 
 class Bubble {
   constructor(){
-    this.x = p5.random(p5.width);
-    this.y = p5.random(p5.height);
     this.diameter = 50;
+    this.x = p5.random(this.diameter, p5.width-this.diameter);
+    this.y = p5.random(this.diameter, p5.height-this.diameter);
   }
 
-  display(){
+  contains(pX, pY){
+    let d = p5.dist(pX, pY, this.x, this.y);
+
+    return d < (this.diameter / 2)
+  }
+
+  draw(){
     p5.ellipse(this.x, this.y, this.diameter, this.diameter);    
   }
 }
