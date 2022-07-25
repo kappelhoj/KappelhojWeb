@@ -9,7 +9,7 @@
       imageUrl="social-logos/GitHub-Mark-Light-64px.png" 
       topText="Github"
       bottomText="Profile"
-      path="https://github.com/ArvidLangsoe"/>
+      path="https://github.com/kappelhoj"/>
   </div>
 </template>
 
