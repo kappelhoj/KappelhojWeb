@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
-import DefaultPageWrapper from '@/components/DefaultPageWrapper'
+import DefaultPageWrapper from '@/components/Layout/DefaultPageWrapper'
 
 export default function Home() {
   return (
